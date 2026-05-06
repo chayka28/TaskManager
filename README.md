@@ -6,8 +6,9 @@
     .venv\Scripts\activate
 # Linux/macOS:
     source .venv/bin/activate
-
+# установка зависимостей
     pip install -r requirements.txt
+# запуск
     uvicorn main:app --reload
 
 ## Эндпоинты
