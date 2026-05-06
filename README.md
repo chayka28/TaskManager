@@ -3,29 +3,34 @@
 ---
 
 ## Установка:
+
     python -m venv .venv
 
-# Windows:
+## Windows:
+
     .venv\Scripts\activate
 
-# Linux/macOS:
+## Linux/macOS:
+
     source .venv/bin/activate
 
-# установка зависимостей
+## установка зависимостей
+
     pip install -r requirements.txt
 
-# запуск
+## запуск
+
     uvicorn main:app --reload
 
 ---
 
 ## Эндпоинты
 
-    POST /tasks — создание задачи. Обязательные поля: title (str), status (new/in_progress/done). Опционально: description (str). Регистр status не учитывается. Возвращает 201 Created и объект с id.
+**POST /tasks** — создание задачи. Обязательные поля: title (str), status (new/in_progress/done). Опционально: description (str). Регистр status не учитывается. Возвращает 201 Created и объект с id.
 
-    GET /tasks — список всех задач. Возвращает 200 OK и массив объектов.
+**GET /tasks** — список всех задач. Возвращает 200 OK и массив объектов.
 
-    GET /tasks/{task_id} — получение задачи по ID. Возвращает 200 OK или 404 Not Found, если задача не найдена.
+**GET /tasks/{task_id}** — получение задачи по ID. Возвращает 200 OK или 404 Not Found, если задача не найдена.
 
 ---
 
